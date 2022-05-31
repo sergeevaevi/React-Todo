@@ -1,8 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import TodoList from './components/TodoList';
+import AppHeader from './components/AppHeader';
+import SearchPanel from './components/SearchPanel';
+
+const App = () => {
+
+  const todoData = [
+    {label: "Coffee", important: false },
+    {label: "Tea", important: true },
+    {label: "Coco", important: false },
+  ]
+
+  return (
+    <div className="App">
+      <AppHeader></AppHeader>
+      <SearchPanel></SearchPanel>
+      <TodoList todo={todoData}></TodoList>
+    </div>
+  );
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -10,8 +27,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
