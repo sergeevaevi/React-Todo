@@ -2,7 +2,7 @@ import React from "react";
 import TodoListItem from "../TodoListItem";
 import "./TodoList.css";
 
-const TodoList = ({ todo }) => {
+const TodoList = ({ todo } : {todo: Array<{ label: string, important: boolean }>}) => {
   return (
     <ul className="list-group todo-list">
       {todo.map((el, index) => {

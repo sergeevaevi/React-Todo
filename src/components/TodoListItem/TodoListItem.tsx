@@ -1,12 +1,8 @@
 import React from "react";
 import "./TodoListItem.css";
 
-type AppProps = {
-  label: string;
-  important: boolean;
-};
 
-const TodoListItem = ({ label, important = false }: AppProps) => {
+const TodoListItem = ({ label, important = false } : {label: string, important: boolean}) => {
   const spanStyle = {
     color: important ? "tomato" : "black",
     fontWeight: important ? "bold" : "normal",
