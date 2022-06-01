@@ -1,8 +1,9 @@
 import React from "react";
-import TodoListItem from "../TodoListItem";
+import TodoListItem from "../TodoListItem/TodoListItem";
 import "./TodoList.css";
+import { TodoItems } from "../App/App";
 
-const TodoList = ({ todo } : {todo: Array<{ label: string, important: boolean }>}) => {
+const TodoList = ({ todo } : {todo: Array<TodoItems>}) => {
   return (
     <ul className="list-group todo-list">
       {todo.map((el, index) => {
